@@ -1,9 +1,12 @@
 @import "tailwindcss";
 
-@layer base {
-  body {
-    @apply bg-[#f4f6fa] text-slate-800 font-sans antialiased selection:bg-indigo-600 selection:text-white min-h-screen overflow-x-hidden;
-  }
+body {
+  background-color: #f4f6fa;
+  color: #1e293b;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Light & Dark Card Utilities */
@@ -26,7 +29,14 @@
   border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
-.glass-panel, .glass-card {
+.glass-panel {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+.glass-card {
   background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
