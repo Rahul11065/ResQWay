@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEmergency } from '../../context/EmergencyContext';
-import { Radio, Zap, CheckCircle2, AlertOctagon } from 'lucide-react';
+import { Radio } from 'lucide-react';
 
 export const TrafficSignalsView: React.FC = () => {
   const { signals, toggleSignalOverride, ambulance } = useEmergency();

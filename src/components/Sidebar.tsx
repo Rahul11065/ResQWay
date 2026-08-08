@@ -12,10 +12,8 @@ import {
   Settings, 
   Route, 
   Siren,
-  Menu,
   X,
   LogOut,
-  UserCheck,
   Lock
 } from 'lucide-react';
 
@@ -25,7 +23,7 @@ interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ mobileOpen, setMobileOpen }) => {
-  const { currentTab, setTab, isActive, ambulance, userAuth, logout, appViewMode, setAppViewMode, loginRole } = useEmergency();
+  const { currentTab, setTab, isActive, ambulance, userAuth, logout, appViewMode, loginRole } = useEmergency();
 
   const navItems: { id: TabType; label: string; icon: React.ElementType; badge?: string }[] = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },

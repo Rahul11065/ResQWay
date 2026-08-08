@@ -1,9 +1,9 @@
 import React from 'react';
 import { useEmergency } from '../../context/EmergencyContext';
-import { ArrowLeft, Layers, Plus, Minus, Target, Siren, Navigation, Activity } from 'lucide-react';
+import { ArrowLeft, Layers, Plus, Minus, Target, Siren } from 'lucide-react';
 
 export const LiveTrackingView: React.FC = () => {
-  const { setTab, isActive, ambulance, hospital, patient, selectedRoute, progressPercent } = useEmergency();
+  const { setTab, isActive, ambulance, hospital, selectedRoute, progressPercent } = useEmergency();
 
   // Dynamic calculations based on progress percent
   const ambX = 15 + (progressPercent / 100) * 70;

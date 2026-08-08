@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEmergency } from '../../context/EmergencyContext';
-import { Bell, Siren, Radio, Building2, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { Bell, Radio, AlertTriangle, CheckCircle2 } from 'lucide-react';
 
 export const AlertsView: React.FC = () => {
   const { logs } = useEmergency();

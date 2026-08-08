@@ -195,7 +195,7 @@ export const HospitalDashboard: React.FC = () => {
         </div>
 
         <button
-          onClick={() => setTab('analytics')}
+          onClick={() => setTab('reports')}
           className="py-3 px-6 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold flex items-center gap-2 transition-all shadow-lg shrink-0"
         >
           <span>Open Analytics Dashboard</span>

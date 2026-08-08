@@ -1,9 +1,9 @@
 import React from 'react';
 import { useEmergency } from '../../context/EmergencyContext';
-import { Building2, CheckCircle2, Loader2, Siren, UserCheck, Stethoscope, Bed, MapPin } from 'lucide-react';
+import { Building2, CheckCircle2, Loader2, Siren, MapPin } from 'lucide-react';
 
 export const HospitalDashboardView: React.FC = () => {
-  const { hospital, ambulance, patient, selectedRoute, progressPercent, updateReadinessItem } = useEmergency();
+  const { hospital, ambulance, selectedRoute, progressPercent, updateReadinessItem } = useEmergency();
 
   const currentEtaMin = Math.max(0, Math.ceil(selectedRoute.estTimeMin * (1 - progressPercent / 100)));
 

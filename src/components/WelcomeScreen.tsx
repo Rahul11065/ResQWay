@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useEmergency } from '../context/EmergencyContext';
-import { Siren, ArrowRight, ShieldCheck, Zap, Activity } from 'lucide-react';
+import { Siren, ArrowRight, ShieldCheck, Activity } from 'lucide-react';
 
 export const WelcomeScreen: React.FC = () => {
   const { setAppViewMode } = useEmergency();
   const [countdown, setCountdown] = useState(3);
-  const [isHovered, setIsHovered] = useState(false);
 
   // 3-second countdown timer to redirect to login page
   useEffect(() => {

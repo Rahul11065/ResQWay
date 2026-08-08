@@ -6,12 +6,12 @@ export const Navbar: React.FC = () => {
   const { isActive, currentTab, setTab, soundEnabled, toggleSound, progressPercent, ambulance } = useEmergency();
 
   const tabs = [
-    { id: 'overview', label: 'Live Simulation', icon: Activity },
+    { id: 'dashboard', label: 'Live Simulation', icon: Activity },
     { id: 'ambulance', label: '1. Ambulance Portal', icon: Siren },
     { id: 'routes', label: '2. Route Engine', icon: Navigation },
     { id: 'signals', label: '3. Signals Control', icon: Radio },
     { id: 'hospital', label: '4. Hospital ER', icon: Building2 },
-    { id: 'analytics', label: '5. Analytics', icon: BarChart3 },
+    { id: 'reports', label: '5. Analytics', icon: BarChart3 },
   ] as const;
 
   return (
@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
         {/* Brand Logo & Live Emergency Badge */}
         <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-start">
           <div 
-            onClick={() => setTab('overview')}
+            onClick={() => setTab('dashboard')}
             className="flex items-center gap-2.5 cursor-pointer group"
           >
             <div className="relative p-2.5 rounded-xl bg-gradient-to-br from-rose-600 to-blue-600 shadow-lg shadow-rose-900/30 group-hover:scale-105 transition-transform">

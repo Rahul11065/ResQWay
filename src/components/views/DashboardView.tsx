@@ -3,7 +3,7 @@ import { useEmergency } from '../../context/EmergencyContext';
 import { Ambulance, Siren, Heart, Clock, ArrowRight, Bell, AlertTriangle, Radio, Building2 } from 'lucide-react';
 
 export const DashboardView: React.FC = () => {
-  const { setTab, ambulance, hospital, selectedRoute, signals, isActive, progressPercent } = useEmergency();
+  const { setTab, ambulance, signals, progressPercent } = useEmergency();
 
   // Helper for ambulance map interpolation in preview
   const ambX = 10 + (progressPercent / 100) * 80;

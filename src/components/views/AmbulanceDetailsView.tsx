@@ -3,7 +3,7 @@ import { useEmergency } from '../../context/EmergencyContext';
 import { ArrowLeft, Heart, Droplets, Activity, Thermometer, ShieldCheck, CheckCircle } from 'lucide-react';
 
 export const AmbulanceDetailsView: React.FC = () => {
-  const { setTab, ambulance, patient } = useEmergency();
+  const { setTab, ambulance } = useEmergency();
 
   return (
     <div className="space-y-6 max-w-5xl mx-auto">

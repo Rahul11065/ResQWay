@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEmergency } from '../../context/EmergencyContext';
-import { ArrowLeft, Sparkles, ShieldCheck, Check, ArrowRight } from 'lucide-react';
+import { ArrowLeft, Sparkles, ShieldCheck, ArrowRight } from 'lucide-react';
 
 export const RouteAnalysisView: React.FC = () => {
   const { setTab, selectRoute, selectedRoute } = useEmergency();

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEmergency } from '../../context/EmergencyContext';
-import { Volume2, VolumeX, RotateCcw, Sliders, ShieldCheck } from 'lucide-react';
+import { RotateCcw, Sliders } from 'lucide-react';
 
 export const SettingsView: React.FC = () => {
   const { soundEnabled, toggleSound, resetEmergency, simSpeed, setSimSpeed } = useEmergency();
