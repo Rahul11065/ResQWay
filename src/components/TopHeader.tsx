@@ -91,49 +91,55 @@ export const TopHeader: React.FC<TopHeaderProps> = ({ onOpenMobileMenu }) => {
           </button>
           
           <div>
-            <h1 className="text-xl lg:text-2xl font-bold text-slate-900 tracking-tight">{title}</h1>
-            <p className="text-xs text-slate-500 mt-0.5">{sub}</p>
+            <h1 className="text-xl lg:text-2xl font-black text-slate-900 tracking-tight flex items-center gap-1.5">
+              Welcome to ResQ<span className="text-emerald-500">Way</span>
+            </h1>
+            <p className="text-xs text-slate-500 font-medium mt-0.5">
+              Your central hub for real-time ambulance dispatch, green corridor control, and ER telemetry.
+            </p>
           </div>
         </div>
 
         {/* Right Tools & Live Telemetry Controls */}
-        <div className="flex items-center flex-wrap gap-3">
+        <div className="flex items-center flex-wrap gap-2.5">
           
-          {/* User Auth Role Badge & Logout */}
+          {/* User Auth Role Badge / Auth Required */}
           {userAuth ? (
             <div className="flex items-center gap-2">
-              <span className="px-3 py-1.5 rounded-lg bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold flex items-center gap-1.5 capitalize">
+              <span className="px-3 py-1.5 rounded-xl bg-blue-50 border border-blue-200 text-blue-700 text-xs font-extrabold flex items-center gap-1.5 capitalize">
                 <UserCheck className="w-3.5 h-3.5 text-blue-600" />
                 <span>{userAuth.role} Portal</span>
               </span>
-              <button
-                onClick={logout}
-                title="Sign Out"
-                className="p-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-600 hover:text-rose-600 hover:bg-rose-50 transition-colors"
-              >
-                <LogOut className="w-4 h-4" />
-              </button>
             </div>
           ) : (
             <div className="flex items-center gap-2">
-              <span className="px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-700 text-xs font-bold flex items-center gap-1.5">
+              <span className="px-3 py-1.5 rounded-xl bg-amber-50/80 border border-amber-200/80 text-amber-800 text-xs font-bold flex items-center gap-1.5 shadow-xs">
                 <Lock className="w-3.5 h-3.5 text-amber-600" />
                 <span>Auth Required</span>
               </span>
             </div>
           )}
 
-          {/* Live Date & Time Cards (Real-time live clock) */}
-          <div className="hidden md:flex items-center gap-2 text-xs font-semibold text-slate-600">
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200">
+          {/* Live Date & Time Cards */}
+          <div className="hidden md:flex items-center gap-2 text-xs font-semibold">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-50/60 border border-blue-200/60 text-slate-700">
               <Calendar className="w-3.5 h-3.5 text-blue-600" />
               <span>{formattedDate}</span>
             </div>
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200 font-mono">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-50/60 border border-blue-200/60 text-slate-700 font-mono">
               <Clock className="w-3.5 h-3.5 text-blue-600" />
               <span>{formattedTime}</span>
             </div>
           </div>
+
+          {/* Red Logout Button */}
+          <button
+            onClick={userAuth ? logout : () => setSimSpeed(1)}
+            title="Exit / Logout"
+            className="p-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white shadow-xs transition-colors"
+          >
+            <LogOut className="w-4 h-4" />
+          </button>
 
           {/* Interactive Simulation Controls */}
           <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl border border-slate-200">
