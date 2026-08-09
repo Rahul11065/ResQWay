@@ -14,7 +14,7 @@ export const MasterDemoController: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-4 pointer-events-none">
+    <div className="fixed bottom-16 lg:bottom-4 left-1/2 -translate-x-1/2 z-30 w-full max-w-4xl px-3 pointer-events-none pb-safe">
       <div className="pointer-events-auto glass-panel p-3 rounded-2xl border border-blue-500/40 shadow-2xl bg-slate-950/95 backdrop-blur-xl flex items-center justify-between gap-3 text-xs">
         
         {/* Quick Demo Trigger */}

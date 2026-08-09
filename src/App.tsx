@@ -15,6 +15,8 @@ import { ReportsView } from './components/views/ReportsView';
 import { SettingsView } from './components/views/SettingsView';
 import { MasterDemoController } from './components/MasterDemoController';
 
+import { MobileBottomNav } from './components/MobileBottomNav';
+
 const MainAppLayout: React.FC = () => {
   const { currentTab, appViewMode } = useEmergency();
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
@@ -33,7 +35,7 @@ const MainAppLayout: React.FC = () => {
         <TopHeader onOpenMobileMenu={() => setMobileSidebarOpen(true)} />
 
         {/* View Content Canvas */}
-        <main className="flex-1 p-4 lg:p-8 space-y-6 pb-20">
+        <main className="flex-1 p-3 sm:p-4 lg:p-8 space-y-6 pb-28 lg:pb-20 pt-safe px-safe">
           {appViewMode === 'login' ? (
             <LoginPage />
           ) : (
@@ -53,6 +55,9 @@ const MainAppLayout: React.FC = () => {
 
         {/* Floating Master Demo Controller at bottom */}
         <MasterDemoController />
+
+        {/* Native Mobile Bottom Navigation Dock (iOS & Android) */}
+        <MobileBottomNav />
 
         {/* Clean Footer */}
         <footer className="border-t border-slate-200 bg-white py-4 px-6 text-xs text-slate-500 mt-auto">
